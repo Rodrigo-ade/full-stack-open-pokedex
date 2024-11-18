@@ -11,9 +11,8 @@ app.get('/version', (req, res) => {
   res.send('3')
 })
 
-app.get('/health', () => {
-  throw('testing error')
-  //res.send('ok')
+app.get('/health', (req, res) => {
+  res.send('ok')
 })
 
 app.listen(PORT, () => {
